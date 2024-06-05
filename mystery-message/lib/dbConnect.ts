@@ -9,12 +9,12 @@ type ConnectionObject = {
 const connection: ConnectionObject = {};
 
 
-mongoose.connection.on("connected", () => {
+mongoose.connection?.on("connected", () => {
   console.log("Database connected successfully")
 });
 
 
-mongoose.connection.on("error", (err) => {
+mongoose.connection?.on("error", (err) => {
   console.log("MongoDB connection error, please make sure db is up and running:", err);
   connection.isConnected = 0;
   process.exit(1)
