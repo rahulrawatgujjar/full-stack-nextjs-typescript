@@ -47,7 +47,7 @@ export async function GET(request: NextRequest) {
 
     const response: ApiResponse = {
       success: true,
-      message: "Username is unique or available"
+      message: "Username is available"
     }
     return NextResponse.json(response, { status: 200 });
 

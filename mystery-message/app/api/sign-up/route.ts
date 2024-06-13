@@ -70,7 +70,7 @@ export async function POST(request: Request) {
       verifyCode
     );
 
-    console.log("\nemailResponse:",emailResponse); // remove it
+    console.log("\nemailResponse:", emailResponse); // remove it
 
     if (!emailResponse.success) {
       const response: ApiResponse = {

@@ -9,12 +9,20 @@ export async function sendVerificationEmail(
   verifyCode: string
 ): Promise<ApiResponse> {
   try {
-    await resend.emails.send({
+    const emailResponse = await resend.emails.send({
       from: 'onboarding@resend.dev',
       to: email,
       subject: "Mystery message | Verification code",
       react: VerificationEmail({ username, otp: verifyCode }),
     });
+    console.log("\nemailResponse:\n", emailResponse); // remove it
+
+    if (emailResponse.error) {
+      return {
+        success: false,
+        message: emailResponse.error.message
+      }
+    }
     return {
       success: true,
       message: "Verification email send successfully"
