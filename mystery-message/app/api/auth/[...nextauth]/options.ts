@@ -8,8 +8,8 @@ import { JWT } from "next-auth/jwt";
 export const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
-      id: "credientials",
-      name: "Credientials",
+      id: "credentials",
+      name: "Credentials",
       credentials: {
         email: { label: "Email", type: "text" },
         password: { label: "Password", type: "password" }
@@ -20,8 +20,8 @@ export const authOptions: NextAuthOptions = {
         try {
           const user = await UserModel.findOne({
             $or: [
-              { email: credentials.email },
-              { username: credentials.username }
+              { email: credentials.identifier },
+              { username: credentials.identifier }
             ]
           });
 
@@ -38,7 +38,7 @@ export const authOptions: NextAuthOptions = {
           //   console.log("I found the user!");
           //   console.log("user:", user);
           //   console.log("credentials", credentials);
-          //   return user;
+          //   // return user;
           // }
 
           const isPasswordCorrect = await bcrypt.compare(credentials.password, user.password);
@@ -77,7 +77,7 @@ export const authOptions: NextAuthOptions = {
     }
   },
   pages: {
-    signIn: "/sign-in"
+    // signIn: "/sign-in"
   },
   session: {
     strategy: "jwt"
