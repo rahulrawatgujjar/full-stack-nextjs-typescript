@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export default function AppLayout({
 }>) {
   return (
     <>
+      <Navbar />
       {children}
     </>
   );
