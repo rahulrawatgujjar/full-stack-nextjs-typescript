@@ -1,10 +1,10 @@
 import UserModel, { Message } from "@/models/User";
 import dbConnect from "@/lib/dbConnect";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { ApiResponse } from "@/types/ApiResponse";
 
 
-export async function POST(request: NextResponse) {
+export async function POST(request: NextRequest) {
   await dbConnect();
 
   try {

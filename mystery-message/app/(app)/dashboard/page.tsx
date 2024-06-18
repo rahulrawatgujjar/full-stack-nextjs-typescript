@@ -55,7 +55,7 @@ const DashboardPage = () => {
     } finally {
       setIsSwitchLoading(false);
     }
-  }, [setValue]);
+  }, [setValue, toast]);
 
   const fetchMessages = useCallback(async (refresh: boolean = false) => {
     setIsLoading(true);
@@ -81,7 +81,7 @@ const DashboardPage = () => {
       setIsSwitchLoading(false);
       setIsLoading(false);
     }
-  }, [setIsLoading, setMessages]);
+  }, [setIsLoading, setMessages,toast]);
 
   useEffect(() => {
     if (!session || !session.user) return;
@@ -113,7 +113,8 @@ const DashboardPage = () => {
     }
   }
 
-  const baseUrl = `${window.location.protocol}//${window.location.host}`;
+  // const baseUrl = `${window.location.protocol}//${window.location.host}`;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const profileUrl = `${baseUrl}/u/${session?.user.username}`;
 
   const copyToClipboard = () => {
