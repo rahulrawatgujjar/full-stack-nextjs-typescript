@@ -10,6 +10,7 @@ export async function middleware(request: NextRequest) {
   console.log("\ntoken\n", token); // remove it
 
   const isPublic = (
+    request.nextUrl.pathname === "/" ||
     request.nextUrl.pathname.startsWith("/sign-up") ||
     request.nextUrl.pathname.startsWith("/verify") ||
     request.nextUrl.pathname.startsWith("/sign-in")

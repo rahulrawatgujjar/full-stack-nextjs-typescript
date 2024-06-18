@@ -50,15 +50,14 @@ const MessageCard = ({ message, onMessageDelete }: MessageCardProps) => {
         variant: "destructive"
       })
     }
-
   }
 
 
 
   return (
-    <Card className="w-1/4">
-      <CardHeader>
-        <CardTitle>Card Title</CardTitle>
+    <Card className="">
+      <CardHeader className="space-y-6 flex flex-row justify-between gap-2">
+        <CardTitle>{message.content}</CardTitle>
         <AlertDialog>
           <AlertDialogTrigger asChild>
             <Button variant="destructive"><X className="w-5 h-5" /></Button>

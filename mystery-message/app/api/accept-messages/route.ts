@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
   }
 
   const userId = user._id;
-  const { isAcceptingMessage } = await request.json();
+  const { acceptMessages: isAcceptingMessage } = await request.json();
 
   try {
     const updatedUser = await UserModel.findByIdAndUpdate(userId,
@@ -93,7 +93,7 @@ export async function GET(request: NextRequest) {
     const response: ApiResponse = {
       success: true,
       message: "Message status is known successfully",
-      isAcceptingMessages: foundUser.isAcceptingMessage
+      isAcceptingMessage: foundUser.isAcceptingMessage
     };
     return NextResponse.json(response, { status: 200 });
 
