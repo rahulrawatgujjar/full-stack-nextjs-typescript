@@ -81,7 +81,7 @@ const DashboardPage = () => {
       setIsSwitchLoading(false);
       setIsLoading(false);
     }
-  }, [setIsLoading, setMessages,toast]);
+  }, [setIsLoading, setMessages, toast]);
 
   useEffect(() => {
     if (!session || !session.user) return;
@@ -137,8 +137,8 @@ const DashboardPage = () => {
 
   return (
     <>
-      <div className="my-8 mx-4 md:mx-8 lg:mx-auto p-6 bg-white rounded w-full max-w-6xl min-h-[calc(100vh-296px)]">
-        <h1 className="text-4xl font-bold mb-4">User Dashboard</h1>
+      <div className="mt-4 my-8 sm:w-[90%] lg:container mx-auto p-6 bg-white rounded min-h-[calc(100vh-296px)]">
+        <h1 className="text-4xl font-bold mb-4 text-center">User Dashboard</h1>
 
         <div className="mb-4">
           <h2 className="text-lg font-semibold mb-2">Copy Your Unique Link</h2>{' '}
@@ -152,7 +152,7 @@ const DashboardPage = () => {
             <Button onClick={copyToClipboard}>Copy</Button>
           </div>
         </div>
-
+        <Separator className="my-6" />
         <div className="mb-4">
           <Switch
             {...register('acceptMessages')}
@@ -164,7 +164,7 @@ const DashboardPage = () => {
             Accept Messages: {acceptMessages ? 'On' : 'Off'}
           </span>
         </div>
-        <Separator />
+        <Separator className="my-6" />
 
         <Button
           className="mt-4"

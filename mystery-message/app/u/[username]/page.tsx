@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { messageSchema } from "@/schemas/messageSchema";
@@ -94,6 +95,7 @@ const MessagePage = () => {
       <section className='w-full py-6'>
         <h1 className='text-3xl md:text-4xl font-bold text-center'>Public Profile Link</h1>
       </section>
+      {/* <Separator className="my-3"/> */}
       <section className='w-full py-6'>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -125,6 +127,7 @@ const MessagePage = () => {
           </form>
         </Form>
       </section>
+      <Separator className="my-3"/>
       <section className="w-full py-6">
         <div className="pb-4">
           <Button onClick={getSuggestedMessages} disabled={isSuggesting}>
@@ -149,7 +152,7 @@ const MessagePage = () => {
                 messages.map((message, index) => {
                   return (
                     <div key={index} className="flex flex-col space-y-1.5">
-                      <Button onClick={(e) => {
+                      <Button className="h-fit" onClick={(e) => {
                         form.setValue("content", message)
                       }} variant="outline"><span className="text-wrap">{message}</span></Button>
                     </div>
@@ -160,6 +163,7 @@ const MessagePage = () => {
           </CardContent>
         </Card>
       </section>
+      <Separator className="my-3"/>
       <section className="w-full py-6">
         <h2 className="text-lg md:text:xl text-center font-semibold">Get Your Message Board</h2>
         <div className="text-center pt-3">

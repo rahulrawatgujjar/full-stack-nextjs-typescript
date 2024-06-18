@@ -84,7 +84,7 @@ const SignUpPage = () => {
     <div className="flex justify-center items-center min-h-screen bg-slate-100">
       <div className="bg-white w-full max-w-md rounded-lg shadow-md p-8 space-y-8">
         <div className="text-center">
-          <h1 className="text-2xl font-extrabold mb-6">Join Mystery Message</h1>
+          <h1 className="text-2xl font-extrabold mb-6">Join Feedback-Cloak</h1>
           <p className="mb-4">Sign up to start your anonymous adventure</p>
         </div>
         <Form {...form}>
