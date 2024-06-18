@@ -22,7 +22,7 @@ const Navbar = () => {
             (
               <>
                 <span className="mr-4">Hello, {user.username}</span>
-                <Button className="w-full sm:w-auto" onClick={() => signOut()}>Log Out</Button>
+                <Button className="w-full sm:w-auto" onClick={() => signOut({ callbackUrl: '/sign-in' })}>Log Out</Button>
               </>
             ) :
             (
@@ -35,7 +35,7 @@ const Navbar = () => {
             )
         }
       </div>
-    </nav>
+    </nav >
   )
 }
 
