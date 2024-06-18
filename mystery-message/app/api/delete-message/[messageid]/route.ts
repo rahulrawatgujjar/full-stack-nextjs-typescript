@@ -44,7 +44,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { messa
     }
 
   } catch (error) {
-    console.log("Error in deleting message", error);
+    // console.log("Error in deleting message", error);
     const response: ApiResponse = {
       success: false,
       message: "Error in deleting message"

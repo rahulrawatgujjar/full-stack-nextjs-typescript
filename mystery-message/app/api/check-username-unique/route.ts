@@ -23,7 +23,7 @@ export async function GET(request: NextRequest) {
 
     // validation with zod
     const result = UsernameQuerySchema.safeParse(queryParams);
-    console.log("result:\n", result); // TODO: remove
+    // console.log("result:\n", result); // TODO: remove
 
     if (!result.success) {
       const usernameErrors = result.error.format().username?._errors || [];
@@ -55,7 +55,7 @@ export async function GET(request: NextRequest) {
 
 
   } catch (error) {
-    console.log("Error checking username", error);
+    // console.log("Error checking username", error);
 
     const response: ApiResponse = {
       success: false,

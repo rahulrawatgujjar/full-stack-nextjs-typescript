@@ -59,7 +59,7 @@ export async function GET(request: NextRequest) {
 
 
   } catch (error) {
-    console.log("Error in getting messages", error);
+    // console.log("Error in getting messages", error);
     const response: ApiResponse = {
       success: false,
       message: "Error in getting messages"

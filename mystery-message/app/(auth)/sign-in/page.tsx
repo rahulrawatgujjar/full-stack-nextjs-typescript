@@ -29,13 +29,13 @@ const SignInPage = () => {
   });
 
   const onSubmit = async (data: z.infer<typeof signInSchema>) => {
-    console.log("data", data);
+    // console.log("data", data);
     setIsSubmitting(true);
     const result = await signIn("credentials", {
       ...data, redirect: false
     });
     setIsSubmitting(false);
-    console.log("result", result); // remove it
+    // console.log("result", result); // remove it
     if (result?.error) {
       if (result.error === "CredentialsSignin") {
         toast({

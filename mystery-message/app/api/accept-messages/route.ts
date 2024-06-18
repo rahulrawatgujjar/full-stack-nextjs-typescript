@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(response, { status: 200 });
 
   } catch (error) {
-    console.log("Error while updating message acceptence status", error);
+    // console.log("Error while updating message acceptence status", error);
     const response: ApiResponse = {
       success: false,
       message: "Error while updating message acceptence status"
@@ -99,7 +99,7 @@ export async function GET(request: NextRequest) {
 
 
   } catch (error) {
-    console.log("Error while checking message acceptence status", error);
+    // console.log("Error while checking message acceptence status", error);
     const response: ApiResponse = {
       success: false,
       message: "Error while checking message acceptence status"

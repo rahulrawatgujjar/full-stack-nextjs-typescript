@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
 
 
   } catch (error) {
-    console.log("Error while verifying code", error);
+    // console.log("Error while verifying code", error);
     const response: ApiResponse = {
       success: false,
       message: "Error while verifying code"

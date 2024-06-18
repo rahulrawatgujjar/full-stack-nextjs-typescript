@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(response, { status: 200 });
 
   } catch (error) {
-    console.log("Error in sending messages", error);
+    // console.log("Error in sending messages", error);
     const response: ApiResponse = {
       success: false,
       message: "Error in sending messages"

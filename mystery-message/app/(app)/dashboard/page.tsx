@@ -62,7 +62,7 @@ const DashboardPage = () => {
     setIsSwitchLoading(true);
     try {
       const response = await axios.get<ApiResponse>("/api/get-messages");
-      console.log("messages:", response.data.messages);
+      // console.log("messages:", response.data.messages);
       setMessages(response.data.messages ?? []);
       if (refresh) {
         toast({
@@ -101,7 +101,7 @@ const DashboardPage = () => {
         description: response.data.message
       });
     } catch (error) {
-      console.log("Error while updating message acceptence status", error);
+      // console.log("Error while updating message acceptence status", error);
       const axiosError = error as AxiosError<ApiResponse>;
       toast({
         title: "Error",

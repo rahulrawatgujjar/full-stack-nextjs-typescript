@@ -43,7 +43,7 @@ const VerifyAccountPage = () => {
 
       router.replace("/sign-in");
     } catch (error) {
-      console.log("Error while verifying user", error); // remove it
+      // console.log("Error while verifying user", error); // remove it
 
       const axiosError = error as AxiosError<ApiResponse>;
       toast({

@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     const result = await model.generateContent(prompt);
     const response = result.response;
     const text = response.text();
-    console.log(text);
+    // console.log(text);
     if (text) {
       const response: ApiResponse = {
         success: true,
@@ -35,7 +35,7 @@ export async function POST(req: Request) {
 
 
   } catch (error) {
-    console.log("An unexpected error occured", error);
+    // console.log("An unexpected error occured", error);
     const response: ApiResponse = {
       success: false,
       message: "Error occured while generating suggestions"
