@@ -38,7 +38,7 @@ const Footer = () => {
         </section>
         <section>
           {/* <Separator className="mx-auto w-[70%]" /> */}
-          <span className="text-sm">&copy; 2024 | FeebackCloak | All Rights Reserved</span>
+          <span className="text-sm">&copy; 2024 | FeedbackCloak | All Rights Reserved</span>
         </section>
       </footer >
     </>

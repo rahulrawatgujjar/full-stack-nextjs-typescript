@@ -17,8 +17,8 @@ const HomePage = () => {
     <>
       <main className='flex flex-col justify-center items-center py-12 px-4 md:px-24 min-h-[calc(100vh-252px)] sm:min-h-[calc(100vh-232px)]'>
         <section className='w-full text-center mb-8 md:mb-24'>
-          <h1 className='text-3xl md:text-4xl font-bold mb-3 md:mb-4'>Welcome to FeebackCloak</h1>
-          <p className='md:text-lg '>Explore FeebackCloak - Where your identity remains a secret.</p>
+          <h1 className='text-3xl md:text-4xl font-bold mb-3 md:mb-4'>Welcome to FeedbackCloak</h1>
+          <p className='md:text-lg '>Explore FeedbackCloak - Where your identity remains a secret.</p>
         </section>
         <section>
           <Carousel

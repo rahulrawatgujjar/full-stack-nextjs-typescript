@@ -12,7 +12,7 @@ export async function sendVerificationEmail(
     const emailResponse = await resend.emails.send({
       from: process.env["MY_EMAIL"] ?? 'onboarding@resend.dev',
       to: email,
-      subject: "Mystery message | Verification code",
+      subject: "FeedbackCloak | Verification code",
       react: VerificationEmail({ username, otp: verifyCode }),
     });
     console.log("\nemailResponse:\n", emailResponse); // remove it
